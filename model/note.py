@@ -25,12 +25,3 @@ class Note:
             self.title = title
         if new_text:
             self.text = new_text
-
-
-    # def date_filtered (self, date: str):
-    
-    #     headers = ['№', 'Заголовок', 'Заметка', 'Дата/время создания', 'Дата/время изменения']
-    #     tabl = [[i, note.get_title(), note.get_text_note(), note.get_creation_data(),
-    #              note.get_changes_data()] for i, note in enumerate(self.__notes, start=1)
-    #             if date in note.get_creation_data() or date in note.get_changes_data()]
-    #     return tabulate(tabl, headers=headers, tablefmt="fancy_grid", stralign='center')

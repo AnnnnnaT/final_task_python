@@ -9,10 +9,8 @@ class Notebook:
 
     def add(self, title, text):
         note = Note(title, text, date = datetime.datetime.today())  
-        self.notes.append(note)
-             
-        
-
+        self.notes.append(note)           
+    
     def remove_note(self, id: int):
         self.notes.pop(id)
 
@@ -30,6 +28,12 @@ class Notebook:
                 
     def size(self):
         return len(self.notes)
+        
+    def state(self):
+        return bool(self.notes)
+    
 
+
+  
 
    

@@ -20,15 +20,19 @@ class Presenter:
     def change_note(self, id: int, new_title, new_text):
         self.book.change_note(id, new_title, new_text)
          
-    def size_notebook(self):
-        if (bool(self.book)):
-            return int(self.book.size())
-        else:
-            print("Notebook is empty")
-
     def get_filtered_book(self, date: str):
         return self.book.filter_by_date(date)
     
     def show_book(self):
-        return self.book.show_book()
-  
+        return self.book.show_book()  
+
+    def open_csv(self):
+        self.book = self.file.read_csv(self.book)
+
+    def save_csv(self):
+        self.file.write_csv(self.book)
+
+    def state(self):
+        return self.book.state()
+
+   
